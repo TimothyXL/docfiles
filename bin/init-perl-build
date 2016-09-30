@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+git clone https://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build/
