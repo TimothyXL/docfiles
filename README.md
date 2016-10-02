@@ -1,2 +1,2 @@
 # docfiles
-Docfiles for easy getting started
+Dotfiles for easy getting started
