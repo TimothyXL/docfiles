@@ -1,0 +1,11 @@
+[user]
+	name = Tim Van den Langenbergh
+	email = tmt_vdl@gmx.com
+[core]
+	editor = vim
+[push]
+    default = simple
+[merge]
+    tool = kdiff3 # kdiff3, vimdiff
+[diff]
+    tool = kompare # kdiff3, kompare, vimdiff
