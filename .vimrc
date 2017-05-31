@@ -42,7 +42,7 @@ highlight PmenuSel   ctermbg=red     ctermfg=white   cterm=bold
 highlight PmenuSbar  ctermbg=magenta ctermfg=magenta
 highlight PmenuThumb ctermbg=red     ctermfg=red
 
-highlight visual     ctermfg=yellow  ctermbg=black
+highlight visual     ctermfg=red  ctermbg=yellow
 
 " Visual mode moving around
 vmap <unique> <up>    <Plug>SchleppUp
