@@ -1,0 +1,18 @@
+use strict;
+use warnings;
+use utf8;
+
+use v5.26.0;
+
+use Carp;
+
+load_plugin qw(Colors Completion CompletionDriver::INC CompletionDriver::LexEnv CompletionDriver::Keywords CompletionDriver::Methods DDC DumpHistory FancyPrompt MultiLine::PPI Packages);
+#load_plugin qw(Interrupt Timing);
+
+$_REPL->fancy_prompt(sub {
+    my $self = shift;
+    sprintf 're.pl(%s):%03d%s> ',
+        $self->can('current_package') && $self->current_package ne 'Devel::REPL::Plugin::Packages::DefaultScratchpad' ? $self->current_package : 'main',
+        $self->lines_read,
+        $self->can('line_depth') ? ':' . $self->line_depth : '';
+});
