@@ -19,3 +19,9 @@
 [submodule ".vim/vim-pathogen"]
 	path = .vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "rbenv"]
+	path = rbenv
+	url = https://github.com/rbenv/rbenv
+[submodule "rustup.rs"]
+	path = rustup.rs
+	url = https://github.com/rust-lang-nursery/rustup.rs

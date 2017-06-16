@@ -51,9 +51,13 @@ ${vcs_info_msg_0_}%{$punct%}-%{$reset_color%}
 # Exports
 export EDITOR="vim"
 export GIT_EDITOR="vim"
+export SUDO_EDITOR="vim"
 export VISUAL="vim"
 
 # Programming setup
-export PATH="$HOME/.plenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.plenv/bin:$HOME/.cargo/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH"
 eval "$(plenv init - zsh)"
 eval "$(~/.rakudobrew/bin/rakudobrew init -)"
+eval "$(rbenv init -)"
+
+echo "${fg_green}Hello, $USER$reset_color"
