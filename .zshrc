@@ -60,4 +60,4 @@ eval "$(plenv init - zsh)"
 eval "$(~/.rakudobrew/bin/rakudobrew init -)"
 eval "$(rbenv init -)"
 
-echo "${fg_green}Hello, $USER$reset_color"
+echo "$fg_no_bold[green]Hello, $USER$reset_color"
