@@ -79,6 +79,8 @@ set mouse=a
 
 set matchpairs+=<:>
 
+set laststatus=2
+
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
