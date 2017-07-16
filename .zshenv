@@ -19,12 +19,6 @@ if (( $UID -ne )); then
     alias snano='sudo nano'
     alias svim='sudo vim'
     alias root='sudo -i'
-    alias reboot='sudo systemctl reboot'
-    alias poweroff='sudo systemctl poweroff'
-    alias shutdown='sudo systemctl poweroff'
-    alias update='sudo zypper up --download-in-advance'
-    alias upgrade='sudo zypper dup --download-in-advance'
-    alias zypper='sudo zypper'
 fi
 
 ## ls
