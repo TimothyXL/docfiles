@@ -1,8 +1,27 @@
 Xcursor.theme: breeze_cursors
 
 URxvt.depth: 32
-URxvt.background: rgba:0000/0000/0000/c800
-URxvt.foreground: #FFFFFF
+URxvt.foreground: #AAAAAA
+URxvt.background: [80]#1A1A1A
+URxvt.cursorColor: #AEAFAD
+
+URxvt.color0: #000000
+URxvt.color1: #9E1828
+URxvt.color2: #008800
+URxvt.color3: #D2BB4B
+URxvt.color4: #414171
+URxvt.color5: #963C59
+URxvt.color6: #418179
+URxvt.color7: #BEBEBE
+
+URxvt.color8: #666666
+URxvt.color9: #BC5766
+URxvt.color10: #61A171
+URxvt.color11: #E7DB52
+URxvt.color12: #5085AF
+URxvt.color13: #A97A99
+URxvt.color14: #6BA4A4
+URxvt.color15: #FFFFFF
 
 URxvt.font: xft:hack:size=9
 URxvt.letterSpace: -1
@@ -17,15 +36,11 @@ URxvt.scrollstyle: plain
 !URxvt.perl-ext-common: default,matcher,url-select,tabbed
 URxvt.perl-ext-common: default,url-select,tabbed
 
-!URxvt.url-launcher: /usr/bin/xdg-open
-!URxvt.matcher.button: 1
-!URxvt.matcher.rend.0: Uline Bold
-
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 
-!URxvt.tabbed.tabbar-fg: 2
-!URxvt.tabbed.tabbar-bg: 0
-!URxvt.tabbed.tab-fg: 3
-!URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.tabbar-fg: 1
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tab-fg: -1
+URxvt.tabbed.tab-bg: 1
