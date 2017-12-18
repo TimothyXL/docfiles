@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+export XKB_DEFAULT_LAYOUT="us"
+export XKB_DEFAULT_VARIANT="euro"
+export XKB_DEFAULT_MODEL="pc104"
+export XKB_DEFAULT_OPTIONS="terminate:ctrl_alt_bksp,compose:menu"
+
+export GDK_BACKEND="wayland"
+export CLUTTER_BACKEND="wayland"
+
+#export QT_QPA_PLATFORM="wayland-egl"
+
+export SDL_VIDEODRIVER="wayland"
+
+exec sway

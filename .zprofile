@@ -1,6 +1,1 @@
-export XDG_CURRENT_DESKTOP="KDE"
-#export QT_QPA_PLATFORM="wayland-egl"
-export QT_AUTO_SCREEN_SCALE_FACTOR="1"
-export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
-export XMODIFIERS="@im=fcitx"
+source $HOME/.profile
