@@ -1,5 +1,7 @@
 Xcursor.theme: breeze_cursors
 
+Xft.dpi: 96
+
 URxvt.depth: 32
 URxvt.foreground: #AAAAAA
 URxvt.background: [80]#1A1A1A
@@ -28,10 +30,16 @@ URxvt.letterSpace: -1
 
 URxvt.geometry: 80x40
 
+URxvt.skipScroll: false
+URxvt.jumpScroll: false
+
 URxvt.scrollBar: true
 URxvt.thickness: 5
 !URxvt.scrollBar_floating: false
 URxvt.scrollstyle: plain
+
+URxvt.iso14755: true
+URxvt.iso14755_52: false
 
 !URxvt.perl-ext-common: default,matcher,url-select,tabbed
 URxvt.perl-ext-common: default,url-select,tabbed
