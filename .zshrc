@@ -57,7 +57,7 @@ export VISUAL="vim"
 # Programming setup
 export PATH="$HOME/.plenv/bin:$HOME/.cargo/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH"
 
-[[ $(</proc/$PPID/cmdline) == *qterminal* \\ && export TERM="xterm-256color"
+#[[ $(</proc/$PPID/cmdline) == *qterminal* \\ && export TERM="xterm-256color"
 
 eval "$(plenv init - zsh)"
 eval "$(~/.rakudobrew/bin/rakudobrew init -)"
