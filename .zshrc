@@ -1,24 +1,19 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
 unsetopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
 zstyle :compinstall filename '/home/tmtvl/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-bindkey "^R" history-incremental-search-backward
 bindkey "^K" history-beginning-search-backward
 bindkey "^J" history-beginning-search-forward
 
 zstyle ':completion:*' menu select
 setopt complete_aliases
 setopt hist_ignore_dups
+setopt correct
 
 autoload -Uz colors promptinit
 colors
@@ -27,9 +22,9 @@ prompt redhat
 
 setopt prompt_subst
 
-local parens="$fg_bold[yellow]"
-local punct="$fg_bold[black]"
-local text="$fg_no_bold[yellow]"
+local parens="$fg_bold[cyan]"
+local punct="$fg_bold[green]"
+local text="$fg_no_bold[cyan]"
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "%{$punct%}-%{$parens%}(%{$text%}%r%{$punct%}:%{$text%}%b%u%c%{$parens%})"
@@ -55,12 +50,27 @@ export SUDO_EDITOR="vim"
 export VISUAL="vim"
 
 # Programming setup
-export PATH="$HOME/.plenv/bin:$HOME/.cargo/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.plenv/bin:$HOME/.cargo/bin:$HOME/js/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH:$JAVA_HOME/bin"
 
-#[[ $(</proc/$PPID/cmdline) == *qterminal* \\ && export TERM="xterm-256color"
+export ANT_HOME="$HOME/java/apache-ant"
+export GOPATH="$HOME/gopath"
+export MAVEN_HOME="$HOME/java/apache-maven"
 
 eval "$(plenv init - zsh)"
 eval "$(~/.rakudobrew/bin/rakudobrew init -)"
 eval "$(rbenv init -)"
 
 echo "$fg_no_bold[green]Hello, $USER$reset_color"
+
+source "$HOME/.zgen/zgen.zsh"
+
+if ! zgen saved; then
+    zgen save
+fi
+
+zgen load willghatch/zsh-cdr
+zgen load zsh-users/zaw
+
+bindkey "^R" zaw-history
+
+zgen load zsh-users/zsh-syntax-highlighting
