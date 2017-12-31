@@ -34,3 +34,6 @@
 [submodule "zgen"]
 	path = .zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule ".vim/bundle/colorschemes"]
+	path = .vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git

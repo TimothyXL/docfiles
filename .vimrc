@@ -79,9 +79,22 @@ set mouse=a
 
 set matchpairs+=<:>
 
+set path+=**
+
+set wildmenu
+
+command! MakeTags !ctags -R .
+
 set laststatus=2
+
+set guifont=Hack:h9
+set guicursor+=i:block-Cursor
+set guicursor+=a:blinkon0
+
+let g:alduin_Shout_Fire_Breath = 1
 
 execute pathogen#infect()
 filetype plugin indent on
+colorscheme alduin
 syntax on
 Helptags
