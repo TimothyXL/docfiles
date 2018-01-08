@@ -95,6 +95,5 @@ let g:alduin_Shout_Fire_Breath = 1
 
 execute pathogen#infect()
 filetype plugin indent on
-colorscheme alduin
 syntax on
 Helptags
