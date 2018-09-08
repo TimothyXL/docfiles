@@ -1,6 +1,6 @@
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd
 unsetopt beep
 bindkey -v
@@ -22,9 +22,9 @@ prompt redhat
 
 setopt prompt_subst
 
-local parens="$fg_bold[cyan]"
-local punct="$fg_bold[green]"
-local text="$fg_no_bold[cyan]"
+local parens="$fg_bold[green]"
+local punct="$fg_bold[yellow]"
+local text="$fg_no_bold[green]"
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "%{$punct%}-%{$parens%}(%{$text%}%r%{$punct%}:%{$text%}%b%u%c%{$parens%})"
@@ -50,10 +50,11 @@ export SUDO_EDITOR="vim"
 export VISUAL="vim"
 
 # Programming setup
-export PATH="$HOME/.plenv/bin:$HOME/.cargo/bin:$HOME/js/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH:$JAVA_HOME/bin"
+export PATH="$HOME/.plenv/bin:$HOME/.perl6/bin:$HOME/.cargo/bin:$HOME/js/bin:$HOME/.rbenv/bin:$HOME/bin:$HOME/.local/bin:$HOME/scripts:$PATH:$JAVA_HOME/bin"
 
 export ANT_HOME="$HOME/java/apache-ant"
 export GOPATH="$HOME/gopath"
+export JAVA_HOME="/usr/lib/jvm/default"
 export MAVEN_HOME="$HOME/java/apache-maven"
 
 eval "$(plenv init - zsh)"
@@ -69,7 +70,9 @@ fi
 
 zgen load willghatch/zsh-cdr
 zgen load zsh-users/zaw
+zgen load chrissicool/zsh-256color
 
 bindkey "^R" zaw-history
 
+zgen load zsh-users/zsh-autosuggestions
 zgen load zsh-users/zsh-syntax-highlighting

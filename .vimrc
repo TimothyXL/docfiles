@@ -91,9 +91,10 @@ set guifont=Hack:h9
 set guicursor+=i:block-Cursor
 set guicursor+=a:blinkon0
 
-let g:alduin_Shout_Fire_Breath = 1
+" let g:alduin_Shout_Fire_Breath = 1
 
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
+colorscheme miko
 Helptags
