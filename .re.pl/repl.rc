@@ -16,3 +16,11 @@ $_REPL->fancy_prompt(sub {
         $self->lines_read,
         $self->can('line_depth') ? ':' . $self->line_depth : '';
 });
+
+$_REPL->fancy_continuation_prompt(sub {
+    my $self = shift;
+    sprintf 're.pl(%s):%03d%s* ',
+        $self->can('current_package') && $self->current_package ne 'Devel::REPL::Plugin::Packages::DefaultScratchpad' ? $self->current_package : 'main',
+        $self->lines_read,
+        $self->can('line_depth') ? ':' . $self->line_depth : '';
+});
